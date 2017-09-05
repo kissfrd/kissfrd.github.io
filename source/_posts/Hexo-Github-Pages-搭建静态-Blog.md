@@ -6,7 +6,7 @@ tags:
 
 ### 配置环境###
 
-####安装 Git
+####安装 Git####
 
 官网下载安装，完成后验证是否安装正确：
 
@@ -14,7 +14,7 @@ tags:
 git --version
 ```
 
-#####配置 SSH key
+#####配置 SSH key#####
 
 首先检查电脑上现有的 ssh key：
 
@@ -42,7 +42,7 @@ ssh-keygen -t rsa -C "youremail@xxx.xxx"
 ssh -T git@GitHub.com
 ```
 
-#####配置 Deployment：
+#####配置 Deployment：#####
 
 ```
 git config --global user.name "yourname"
@@ -51,7 +51,7 @@ git config --global user.email "youremail"
 
 
 
-####安装 Node.js
+####安装 Node.js####
 
 官网下载安装，完成后验证是否安装正确：
 
@@ -62,7 +62,7 @@ npm -v
 
 
 
-####安装 Hexo
+####安装 Hexo####
 
 新建文件夹，在该目录打开命令行
 
@@ -84,7 +84,7 @@ hexo -v
 
 
 
-#####初始化 Hexo：
+#####初始化 Hexo：#####
 
 ```
 hexo init
@@ -100,7 +100,7 @@ npm install
 
 
 
-#####查看页面效果
+#####查看页面效果#####
 
 ```
 hexo g
@@ -124,7 +124,7 @@ hexo s
 
 
 
-####使用 Git 部署
+####使用 Git 部署####
 
 安装插件：
 
