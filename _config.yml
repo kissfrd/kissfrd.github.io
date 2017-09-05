@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: FightForFreedom
 subtitle:
-description:
-author: John Doe
-language:
+description: 翩翩飞鸟，息我庭柯。
+author: kissfrd
+language: zh-Hans
 timezone:
 
 # URL
@@ -72,7 +72,8 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+#theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
