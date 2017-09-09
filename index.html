@@ -384,14 +384,14 @@
 
       
         
-          <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><h3 id="Blog-内容"><a href="#Blog-内容" class="headerlink" title="Blog 内容"></a>Blog 内容</h3><p>创建两个分支分别管理 blog 源文件和静态网页</p>
+          <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p><strong>Blog 内容</strong>: 创建两个分支分别管理 blog 源文件和静态网页</p>
 <ul>
 <li>git push 推送博客源文件到 hexo 分支作为备份</li>
 </ul>
 <ul>
 <li>hexo d 推送静态网页到 master 分支更新 blog 页面</li>
 </ul>
-<h3 id="Blog-主题"><a href="#Blog-主题" class="headerlink" title="Blog 主题"></a>Blog 主题</h3><p>以 Submodule 方式管理主题
+<p><strong>Blog 主题</strong>: 以 Submodule 方式管理主题
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/通过Github同步HexoBlog/#more" rel="contents">
@@ -706,7 +706,7 @@
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "";
+    var search_path = "search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {
