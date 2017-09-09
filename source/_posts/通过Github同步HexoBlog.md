@@ -6,18 +6,22 @@ tags:
 
 ## 思路
 
-**Blog 内容**: 创建两个分支分别管理 blog 源文件和静态网页.
+### Blog 内容
+
+创建两个分支分别管理 blog 源文件和静态网页.
 
 * git push 推送博客源文件到 hexo 分支作为备份
 
 
 * hexo d 推送静态网页到 master 分支更新 blog 页面
 
-**Blog 主题**: 以 Submodule 方式管理主题
+### Blog 主题
+
+以 Submodule 方式管理主题
 
 ## 搭建流程
 
-###Blog 内容
+### Blog 内容
 
 1. 创建仓库: username.github.io
 
@@ -37,14 +41,14 @@ tags:
 
 8. 执行 `hexo g -d` 生成网站并部署到 master 分支
 
-###Blog 主题:
+### Blog 主题:
 
 1. 在 Github 上 fork 自己喜欢的主题
 
 2. 在本地 username.github.io 目录下以 Submodule 方式添加已 fork 的主题:
 
    ```
-   git submodule add https://github.com/kissfrd/hexo-theme-next.git theme/next
+   git submodule add https://github.com/kissfrd/hexo-theme-next.git themes/next
    ```
 
 3. 主题配置发生改动后在其目录下 git push
@@ -52,7 +56,7 @@ tags:
    或在 username.github.io 目录下执行指令
 
    ```
-   git add theme/next
+   git add themes/next
    git commit -m "..."
    ```
 
@@ -60,7 +64,7 @@ tags:
 
 ## 多终端同步
 
-###Blog 内容:
+### Blog 内容:
 
 1. git clone 仓库到本地
 
@@ -70,7 +74,7 @@ tags:
 
    \* 另一台电脑 push, 部署后会改变之前博客的发布时间.
 
-###Blog 主题:
+### Blog 主题:
 
 执行以下指令即可:
 
