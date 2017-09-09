@@ -95,17 +95,17 @@
 
 
 
-<meta name="description" content="思路Blog 内容: 创建两个分支分别管理 blog 源文件和静态网页.  git push 推送博客源文件到 hexo 分支作为备份   hexo d 推送静态网页到 master 分支更新 blog 页面  Blog 主题: 以 Submodule 方式管理主题 搭建流程###Blog 内容  创建仓库: username.github.io  创建两个分支: master 与 hexo  设">
+<meta name="description" content="思路Blog 内容创建两个分支分别管理 blog 源文件和静态网页.  git push 推送博客源文件到 hexo 分支作为备份   hexo d 推送静态网页到 master 分支更新 blog 页面  Blog 主题以 Submodule 方式管理主题 搭建流程Blog 内容 创建仓库: username.github.io  创建两个分支: master 与 hexo  设置 hexo 为">
 <meta property="og:type" content="article">
 <meta property="og:title" content="通过 Github 同步 Hexo Blog">
 <meta property="og:url" content="http://yoursite.com/2017/09/04/通过Github同步HexoBlog/index.html">
 <meta property="og:site_name" content="FightForFreedom">
-<meta property="og:description" content="思路Blog 内容: 创建两个分支分别管理 blog 源文件和静态网页.  git push 推送博客源文件到 hexo 分支作为备份   hexo d 推送静态网页到 master 分支更新 blog 页面  Blog 主题: 以 Submodule 方式管理主题 搭建流程###Blog 内容  创建仓库: username.github.io  创建两个分支: master 与 hexo  设">
+<meta property="og:description" content="思路Blog 内容创建两个分支分别管理 blog 源文件和静态网页.  git push 推送博客源文件到 hexo 分支作为备份   hexo d 推送静态网页到 master 分支更新 blog 页面  Blog 主题以 Submodule 方式管理主题 搭建流程Blog 内容 创建仓库: username.github.io  创建两个分支: master 与 hexo  设置 hexo 为">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-09T08:40:04.934Z">
+<meta property="og:updated_time" content="2017-09-09T08:50:05.262Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="通过 Github 同步 Hexo Blog">
-<meta name="twitter:description" content="思路Blog 内容: 创建两个分支分别管理 blog 源文件和静态网页.  git push 推送博客源文件到 hexo 分支作为备份   hexo d 推送静态网页到 master 分支更新 blog 页面  Blog 主题: 以 Submodule 方式管理主题 搭建流程###Blog 内容  创建仓库: username.github.io  创建两个分支: master 与 hexo  设">
+<meta name="twitter:description" content="思路Blog 内容创建两个分支分别管理 blog 源文件和静态网页.  git push 推送博客源文件到 hexo 分支作为备份   hexo d 推送静态网页到 master 分支更新 blog 页面  Blog 主题以 Submodule 方式管理主题 搭建流程Blog 内容 创建仓库: username.github.io  创建两个分支: master 与 hexo  设置 hexo 为">
 
 
 
@@ -115,7 +115,7 @@
     root: '/',
     scheme: 'Mist',
     version: '5.1.2',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"hide","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
@@ -305,16 +305,15 @@
       
 
       
-        <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p><strong>Blog 内容</strong>: 创建两个分支分别管理 blog 源文件和静态网页.</p>
+        <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><h3 id="Blog-内容"><a href="#Blog-内容" class="headerlink" title="Blog 内容"></a>Blog 内容</h3><p>创建两个分支分别管理 blog 源文件和静态网页.</p>
 <ul>
 <li>git push 推送博客源文件到 hexo 分支作为备份</li>
 </ul>
 <ul>
 <li>hexo d 推送静态网页到 master 分支更新 blog 页面</li>
 </ul>
-<p><strong>Blog 主题</strong>: 以 Submodule 方式管理主题</p>
-<h2 id="搭建流程"><a href="#搭建流程" class="headerlink" title="搭建流程"></a>搭建流程</h2><p>###Blog 内容</p>
-<ol>
+<h3 id="Blog-主题"><a href="#Blog-主题" class="headerlink" title="Blog 主题"></a>Blog 主题</h3><p>以 Submodule 方式管理主题</p>
+<h2 id="搭建流程"><a href="#搭建流程" class="headerlink" title="搭建流程"></a>搭建流程</h2><h3 id="Blog-内容-1"><a href="#Blog-内容-1" class="headerlink" title="Blog 内容"></a>Blog 内容</h3><ol>
 <li><p>创建仓库: username.github.io</p>
 </li>
 <li><p>创建两个分支: master 与 hexo</p>
@@ -333,21 +332,19 @@
 <li><p>执行 <code>hexo g -d</code> 生成网站并部署到 master 分支</p>
 </li>
 </ol>
-<p>###Blog 主题:</p>
-<ol>
+<h3 id="Blog-主题-1"><a href="#Blog-主题-1" class="headerlink" title="Blog 主题:"></a>Blog 主题:</h3><ol>
 <li><p>在 Github 上 fork 自己喜欢的主题</p>
 </li>
 <li><p>在本地 username.github.io 目录下以 Submodule 方式添加已 fork 的主题:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git submodule add https://github.com/kissfrd/hexo-theme-next.git theme/next</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git submodule add https://github.com/kissfrd/hexo-theme-next.git themes/next</div></pre></td></tr></table></figure>
 </li>
 <li><p>主题配置发生改动后在其目录下 git push</p>
 <p>或在 username.github.io 目录下执行指令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git add theme/next</div><div class="line">git commit -m &quot;...&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git add themes/next</div><div class="line">git commit -m &quot;...&quot;</div></pre></td></tr></table></figure>
 <p>​</p>
 </li>
 </ol>
-<h2 id="多终端同步"><a href="#多终端同步" class="headerlink" title="多终端同步"></a>多终端同步</h2><p>###Blog 内容:</p>
-<ol>
+<h2 id="多终端同步"><a href="#多终端同步" class="headerlink" title="多终端同步"></a>多终端同步</h2><h3 id="Blog-内容-2"><a href="#Blog-内容-2" class="headerlink" title="Blog 内容:"></a>Blog 内容:</h3><ol>
 <li><p>git clone 仓库到本地</p>
 </li>
 <li><p>在本地 username.github.io 目录下安装 hexo (注: 本次安装不需要 <code>hexo init</code> 指令)</p>
@@ -355,8 +352,7 @@
 <p>* 另一台电脑 push, 部署后会改变之前博客的发布时间.</p>
 </li>
 </ol>
-<p>###Blog 主题:</p>
-<p>执行以下指令即可:</p>
+<h3 id="Blog-主题-2"><a href="#Blog-主题-2" class="headerlink" title="Blog 主题:"></a>Blog 主题:</h3><p>执行以下指令即可:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git submodule init</div><div class="line">git submodule update</div></pre></td></tr></table></figure>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
 <li><a href="https://zhihu.com/question/21193762/answer/79109280" target="_blank" rel="external">使用 hexo, 如果换了电脑怎么更新博客? - 回答作者: CrazyMilk</a></li>
@@ -493,7 +489,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#思路"><span class="nav-number">1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建流程"><span class="nav-number">2.</span> <span class="nav-text">搭建流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多终端同步"><span class="nav-number">3.</span> <span class="nav-text">多终端同步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#思路"><span class="nav-number">1.</span> <span class="nav-text">思路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Blog-内容"><span class="nav-number">1.1.</span> <span class="nav-text">Blog 内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Blog-主题"><span class="nav-number">1.2.</span> <span class="nav-text">Blog 主题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建流程"><span class="nav-number">2.</span> <span class="nav-text">搭建流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Blog-内容-1"><span class="nav-number">2.1.</span> <span class="nav-text">Blog 内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Blog-主题-1"><span class="nav-number">2.2.</span> <span class="nav-text">Blog 主题:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多终端同步"><span class="nav-number">3.</span> <span class="nav-text">多终端同步</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Blog-内容-2"><span class="nav-number">3.1.</span> <span class="nav-text">Blog 内容:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Blog-主题-2"><span class="nav-number">3.2.</span> <span class="nav-text">Blog 主题:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
