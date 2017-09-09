@@ -45,9 +45,11 @@ tags:
 ## 关于 Blog 主题的同步
 
 * 使用 git submodules 管理自定义主题
+
+
 * git push 不会推送自定义主题文件夹中的内容; 解决方法是删除自定义主题目录下的 .git 文件夹, 然后执行 `git rm -rf --cached themes/themename` 清除原本仓库的 git 记录, 使之成为普通文件夹.
 
 **参考文章**
 
-[使用 hexo, 如果换了电脑怎么更新博客? - 回答作者: CrazyMilk] (https://zhihu.com/question/21193762/answer/79109280)
+[使用 hexo, 如果换了电脑怎么更新博客? - 回答作者: CrazyMilk](https://zhihu.com/question/21193762/answer/79109280)
 
