@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="blog," />
 
 
 
@@ -95,16 +95,18 @@
 
 
 
-<meta name="description" content="Stay hungry. Stay foolish.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="FightForFreedom">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="思路Blog 内容创建两个分支分别管理 blog 源文件和静态网页  git push 推送博客源文件到 hexo 分支作为备份   hexo d 推送静态网页到 master 分支更新 blog 页面  Blog 主题以 Submodule 方式管理主题 搭建流程Blog 内容 创建仓库: username.github.io  创建两个分支: master 与 hexo">
+<meta name="keywords" content="blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="通过 Github 同步 Hexo Blog">
+<meta property="og:url" content="http://yoursite.com/通过Github同步HexoBlog/index.html">
 <meta property="og:site_name" content="FightForFreedom">
-<meta property="og:description" content="Stay hungry. Stay foolish.">
+<meta property="og:description" content="思路Blog 内容创建两个分支分别管理 blog 源文件和静态网页  git push 推送博客源文件到 hexo 分支作为备份   hexo d 推送静态网页到 master 分支更新 blog 页面  Blog 主题以 Submodule 方式管理主题 搭建流程Blog 内容 创建仓库: username.github.io  创建两个分支: master 与 hexo">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-09-09T11:35:47.860Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="FightForFreedom">
-<meta name="twitter:description" content="Stay hungry. Stay foolish.">
+<meta name="twitter:title" content="通过 Github 同步 Hexo Blog">
+<meta name="twitter:description" content="思路Blog 内容创建两个分支分别管理 blog 源文件和静态网页  git push 推送博客源文件到 hexo 分支作为备份   hexo d 推送静态网页到 master 分支更新 blog 页面  Blog 主题以 Submodule 方式管理主题 搭建流程Blog 内容 创建仓库: username.github.io  创建两个分支: master 与 hexo">
 
 
 
@@ -134,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/通过Github同步HexoBlog/"/>
 
 
 
 
 
-  <title>FightForFreedom</title>
+  <title>通过 Github 同步 Hexo Blog | FightForFreedom</title>
   
 
 
@@ -159,8 +161,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -253,9 +254,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -285,9 +286,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/通过Github同步HexoBlog/" itemprop="url">通过 Github 同步 Hexo Blog</a></h1>
+          <h1 class="post-title" itemprop="name headline">通过 Github 同步 Hexo Blog</h1>
         
 
         <div class="post-meta">
@@ -359,8 +358,7 @@
       
 
       
-        
-          <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><h4 id="Blog-内容"><a href="#Blog-内容" class="headerlink" title="Blog 内容"></a>Blog 内容</h4><p>创建两个分支分别管理 blog 源文件和静态网页</p>
+        <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><h4 id="Blog-内容"><a href="#Blog-内容" class="headerlink" title="Blog 内容"></a>Blog 内容</h4><p>创建两个分支分别管理 blog 源文件和静态网页</p>
 <ul>
 <li>git push 推送博客源文件到 hexo 分支作为备份</li>
 </ul>
@@ -371,15 +369,46 @@
 <h2 id="搭建流程"><a href="#搭建流程" class="headerlink" title="搭建流程"></a>搭建流程</h2><h4 id="Blog-内容-1"><a href="#Blog-内容-1" class="headerlink" title="Blog 内容"></a>Blog 内容</h4><ol>
 <li><p>创建仓库: <code>username.github.io</code></p>
 </li>
-<li><p>创建两个分支: master 与 hexo
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/通过Github同步HexoBlog/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<li><p>创建两个分支: master 与 hexo <a id="more"></a></p>
+</li>
+<li><p>设置 hexo 为默认分支</p>
+</li>
+<li><p>git clone 仓库到本地</p>
+</li>
+<li><p>在本地 <code>username.github.io</code> 目录下安装 hexo (当前分支为 hexo)</p>
+<p>* 安装过程中 <code>hexo init</code> 会删除 .git 文件夹; 要避免这一问题, 先把 hexo 安装到别的目录, 再拷贝过来即可.</p>
+</li>
+<li><p>修改 _config.yml 文件中的 deploy 参数, 分支为 master</p>
+</li>
+<li><p>依次执行 <code>git add .</code> <code>git commit -m &quot;...&quot;</code> <code>git push origin hexo</code> 提交 blog 源文件到 hexo 分支</p>
+</li>
+<li><p>执行 <code>hexo g -d</code> 生成网站并部署到 master 分支</p>
+</li>
+</ol>
+<h4 id="Blog-主题-1"><a href="#Blog-主题-1" class="headerlink" title="Blog 主题"></a>Blog 主题</h4><ol>
+<li><p>在 Github 上 fork 自己喜欢的主题</p>
+</li>
+<li><p>在本地 <code>username.github.io</code> 目录下以 Submodule 方式添加已 fork 的主题:</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git submodule <span class="built_in">add</span> http<span class="variable">s:</span>//github.<span class="keyword">com</span>/kissfrd/hexo-theme-<span class="keyword">next</span>.git themes/<span class="keyword">next</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>主题配置发生改动后在其目录下 git push</p>
+</li>
+</ol>
+<h2 id="多终端同步"><a href="#多终端同步" class="headerlink" title="多终端同步"></a>多终端同步</h2><h4 id="Blog-内容-2"><a href="#Blog-内容-2" class="headerlink" title="Blog 内容"></a>Blog 内容</h4><ol>
+<li><p>git clone 仓库到本地</p>
+</li>
+<li><p>在本地 <code>username.github.io</code> 目录下安装 hexo (注: 本次安装不需要 <code>hexo init</code> 指令)</p>
+</li>
+</ol>
+<p>* 只要把 hexo 和所需插件写入到 package.json 中 (安装时加 –save 参数会自动写入), 那么 git clone 下来之后,  <code>npm install</code> 就能装好 hexo 和所有的依赖</p>
+<p>* 另一台电脑 push, 部署后会改变之前博客的发布时间.</p>
+<h4 id="Blog-主题-2"><a href="#Blog-主题-2" class="headerlink" title="Blog 主题"></a>Blog 主题</h4><p>执行以下指令即可:</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">git</span> <span class="keyword">submodule </span>init</div><div class="line"><span class="symbol">git</span> <span class="keyword">submodule </span>update</div></pre></td></tr></table></figure>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://zhihu.com/question/21193762/answer/79109280" target="_blank" rel="external">使用 hexo, 如果换了电脑怎么更新博客? - 回答作者: CrazyMilk</a></li>
+<li><a href="http://jr0cket.co.uk/hexo/using-git-submodules-for-custom-hexo-theme.html" target="_blank" rel="external">Using Git Submodules to Manage Your Custom Hexo Theme</a></li>
+</ul>
+
       
     </div>
     
@@ -394,14 +423,20 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/blog/" rel="tag"># blog</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -411,10 +446,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -422,6 +458,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -442,8 +482,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -522,6 +571,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#思路"><span class="nav-number">1.</span> <span class="nav-text">思路</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Blog-内容"><span class="nav-number">1.0.1.</span> <span class="nav-text">Blog 内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Blog-主题"><span class="nav-number">1.0.2.</span> <span class="nav-text">Blog 主题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建流程"><span class="nav-number">2.</span> <span class="nav-text">搭建流程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Blog-内容-1"><span class="nav-number">2.0.1.</span> <span class="nav-text">Blog 内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Blog-主题-1"><span class="nav-number">2.0.2.</span> <span class="nav-text">Blog 主题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多终端同步"><span class="nav-number">3.</span> <span class="nav-text">多终端同步</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Blog-内容-2"><span class="nav-number">3.0.1.</span> <span class="nav-text">Blog 内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Blog-主题-2"><span class="nav-number">3.0.2.</span> <span class="nav-text">Blog 主题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -642,6 +707,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
 
   
 
