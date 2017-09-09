@@ -5,7 +5,7 @@
 # Site
 title: FightForFreedom
 subtitle: Cease to struggle and you cease to live.
-description: Stay Hungry,Stay Foolish.
+description: Stay hungry. Stay foolish.
 author: kissfrd
 language: zh-Hans
 timezone:
@@ -72,8 +72,8 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-#theme: landscape
-theme: next
+theme: landscape
+#theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
